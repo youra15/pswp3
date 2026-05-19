@@ -1,0 +1,46 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ra_rb_rr.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rchavast <rchavast@student.42.fr>          #+#  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026-05-18 16:17:55 by rchavast          #+#    #+#             */
+/*   Updated: 2026-05-18 16:17:55 by rchavast         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
+
+static void	rotate(t_stack **stack)
+{
+	t_stack	*first;
+	t_stack	*last;
+
+	if (!stack || !*stack || !(*stack)->next)
+		return ;
+	first = *stack;
+	*stack = first->next;
+	first->next = NULL;
+	last = stack_last(*stack);
+	last->next = first;
+}
+
+void	ra(t_stack **a)
+{
+	rotate(a);
+	ft_putstr_fd("ra\n", 1);
+}
+
+void	rb(t_stack **b)
+{
+	rotate(b);
+	ft_putstr_fd("rb\n", 1);
+}
+
+void	rr(t_stack **a, t_stack **b)
+{
+	rotate(a);
+	rotate(b);
+	ft_putstr_fd("rr\n", 1);
+}
