@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rchavast <rchavast@student.42.fr>          #+#  +:+       +#+        */
+/*   By: yaaguerd <yasser.aguerd@learner.42.tech    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026-05-18 16:19:53 by rchavast          #+#    #+#             */
-/*   Updated: 2026-05-18 16:19:53 by rchavast         ###   ########.fr       */
+/*   Created: 2026/05/19 18:28:02 by yaaguerd          #+#    #+#             */
+/*   Updated: 2026/05/19 18:38:56 by yaaguerd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,11 @@ int	parse_number(char *str, int *nbr)
 	if (!str || !str[0])
 		return (0);
 	sign = parse_sign(str, &i);
-	if (!ft_isdigit(str[i]))
+	if (!(str[i] >= '0' && str[i] <= '9'))
 		return (0);
 	while (str[i])
 	{
-		if (!ft_isdigit(str[i]))
+		if (!(str[i] >= '0' && str[i] <= '9'))
 			return (0);
 		n = n * 10 + str[i] - '0';
 		i++;

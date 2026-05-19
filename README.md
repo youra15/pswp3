@@ -1,7 +1,7 @@
 ````md
 # Push_swap
 
-> This activity has been created as part of the 42 curriculum by <rchavast> and <yasser>
+> This activity has been created as part of the 42 curriculum by <rchavast> and <yaaguerd>
 
 ## Description
 

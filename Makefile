@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: yaaguerd <yasser.aguerd@learner.42.tech    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/05/19 18:27:48 by yaaguerd          #+#    #+#              #
+#    Updated: 2026/05/19 18:37:53 by yaaguerd         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = push_swap
 
 CC = cc
@@ -17,27 +29,20 @@ SRC = main.c \
 	sort.c \
 	utils.c \
 	free.c \
-	split.c
+	split.c 
 
 OBJ = $(SRC:.c=.o)
 
-LIBFT = libft/libft.a
-
 all: $(NAME)
 
-$(LIBFT):
-	make -C libft
-
-$(NAME): $(OBJ) $(LIBFT)
-	$(CC) $(CFLAGS) $(OBJ) $(LIBFT) -o $(NAME)
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	rm -f $(OBJ)
-	make -C libft clean
 
 fclean: clean
 	rm -f $(NAME)
-	make -C libft fclean
 
 re: fclean all
 

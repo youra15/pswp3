@@ -5,17 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaaguerd <yasser.aguerd@learner.42.tech    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/27 14:01:03 by yaaguerd          #+#    #+#             */
-/*   Updated: 2026/04/27 14:43:11 by yaaguerd         ###   ########.fr       */
+/*   Created: 2026/05/19 18:40:59 by yaaguerd          #+#    #+#             */
+/*   Updated: 2026/05/19 18:43:09 by yaaguerd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
+#include <unistd.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{

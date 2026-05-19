@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yaaguerd <yasser.aguerd@learner.42.tech    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/27 14:00:39 by yaaguerd          #+#    #+#             */
-/*   Updated: 2026/04/27 14:42:38 by yaaguerd         ###   ########.fr       */
+/*   Created: 2026/05/19 18:41:52 by yaaguerd          #+#    #+#             */
+/*   Updated: 2026/05/19 18:41:52 by yaaguerd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)
 {
